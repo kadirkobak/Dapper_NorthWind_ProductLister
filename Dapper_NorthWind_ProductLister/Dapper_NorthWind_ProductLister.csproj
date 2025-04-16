@@ -92,5 +92,8 @@
   <ItemGroup>
     <Content Include="NorthWindDataFolder\NorthWindScript.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
