@@ -16,5 +16,14 @@ namespace Dapper_NorthWind_ProductLister
         {
             InitializeComponent();
         }
+
+        private void btnCategoryList_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM Categories";
+            var connection = "Server=1LP021\\SQLEXPRESS;initial catalog=DbDapperNorthWind;" +
+          "integrated security=true;TrustServerCertificate=true";
+
+            //var values =
+        }
     }
 }
