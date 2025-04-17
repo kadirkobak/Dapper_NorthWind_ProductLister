@@ -59,7 +59,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dtos\CategoryDtos\CreateCategoryDto.cs" />
+    <Compile Include="Dtos\CategoryDtos\GetByIdCategoryDto.cs" />
     <Compile Include="Dtos\CategoryDtos\ResultCategoryDto.cs" />
+    <Compile Include="Dtos\CategoryDtos\UpdateCategoryDto.cs" />
+    <Compile Include="Dtos\ProductDtos\CreateProductDto.cs" />
+    <Compile Include="Dtos\ProductDtos\GetByIdProductDto.cs" />
+    <Compile Include="Dtos\ProductDtos\ResultProductDto.cs" />
+    <Compile Include="Dtos\ProductDtos\UpdateProductDto.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
