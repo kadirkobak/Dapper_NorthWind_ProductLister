@@ -49,5 +49,15 @@ namespace Dapper_NorthWind_ProductLister
             parameters.Add("@categoryId", txtCategoryId.Text);
             await connection.ExecuteAsync(query, parameters);
         }
+
+        private async void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string query = "UPDATE Categories SET CategoryName = @categoryName, Description = @description WHERE CategoryId = @categoryId";
+            var parameters = new DynamicParameters();
+            parameters.Add("@categoryId", txtCategoryId.Text);
+            parameters.Add("@categoryName", txtCategoryName.Text);
+            parameters.Add("@description", txtDescription.Text);
+            await connection.ExecuteAsync(query, parameters);
+        }
     }
 }
