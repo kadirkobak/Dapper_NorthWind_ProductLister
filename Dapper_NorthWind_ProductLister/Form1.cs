@@ -32,5 +32,22 @@ namespace Dapper_NorthWind_ProductLister
             var values = await connection.QueryAsync<ResultCategoryDto>(query);
             dataGridView1.DataSource = values.ToList();
         }
+
+        private async void btnCategoryAdd_Click(object sender, EventArgs e)
+        {
+            string query = "INSERT INTO Categories (CategoryName, Description) VALUES (@p1, @p2)";
+            var parameters = new DynamicParameters();
+            parameters.Add("@p1", txtCategoryName.Text);
+            parameters.Add("@p2", txtDescription.Text);
+            await connection.ExecuteAsync(query, parameters);
+        }
+
+        private async void btnDelete_Click(object sender, EventArgs e)
+        {
+            string query = "DELETE FROM Categories WHERE CategoryId = @categoryId"; 
+            var parameters = new DynamicParameters();
+            parameters.Add("@categoryId", txtCategoryId.Text);
+            await connection.ExecuteAsync(query, parameters);
+        }
     }
 }
