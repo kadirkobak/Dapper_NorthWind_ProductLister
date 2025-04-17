@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\CategoryDtos\CreateCategoryDto.cs" />
     <Compile Include="Dtos\CategoryDtos\ResultCategoryDto.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
